@@ -1,0 +1,38 @@
+﻿<Window x:Class="mc_launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mc_launcher"
+        mc:Ignorable="d"
+        Title="ShaDowLess Minecraft Launcher beta v0.2" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="397*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="360*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" DisplayMemberPath="Id" Margin="108,57,0,0" />
+
+
+        <TextBlock HorizontalAlignment="Left" Height="42" Margin="10,10,0,0" TextWrapping="Wrap" Text="欢迎使用! 模块作者:dxr_xie2019" VerticalAlignment="Top" Width="377" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.249"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="10,57,0,0" TextWrapping="Wrap" Text="选择游戏版本:" VerticalAlignment="Top" Width="93"/>
+        <Button Content="启动" Grid.Column="2" Margin="167,337,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.507,0.209" Click="Button_Click" HorizontalAlignment="Left" Width="145" Height="56"/>
+        <TextBox x:Name="javapath" HorizontalAlignment="Left" Height="23" Margin="84,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="313" RenderTransformOrigin="0.421,0.478"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="10,177,0,0" TextWrapping="Wrap" Text="java路径:" VerticalAlignment="Top" Width="57" RenderTransformOrigin="-6.747,-0.774"/>
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,116,0,0" TextWrapping="Wrap" Text="游戏名字:" VerticalAlignment="Top" Width="93"/>
+        <TextBox x:Name="Username" HorizontalAlignment="Left" Height="25" Margin="108,118,0,0" TextWrapping="Wrap" Text="Steve" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.49,0"/>
+        <Button Content="微软正版登录" Click="Button_online" Grid.Column="2" HorizontalAlignment="Left" Height="48" Margin="167,240,0,0" VerticalAlignment="Top" Width="129" RenderTransformOrigin="0.854,0.456"/>
+        <TextBlock HorizontalAlignment="Left" Height="49" Margin="10,219,0,0" TextWrapping="Wrap" Text="提示：若您的电脑未配置JAVA_HOME环境变量，这里只会显示\bin\javaw.exe,请手动输入java路径!" VerticalAlignment="Top" Width="360"/>
+        <ContentControl x:Name="ContentControl1"  Grid.Column="2" HorizontalAlignment="Left" Height="225" Margin="27,10,0,0" VerticalAlignment="Top" Width="297"/>
+    </Grid>
+</Window>
